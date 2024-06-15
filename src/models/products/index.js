@@ -8,7 +8,7 @@ async function getProducts(convert) {
   const result = await query(sql);
   const products = result.rows;
   if (convert) {
-    for(let i = 0 ; i < products.length ; i++) {
+    for(let i = 0 ; i <= products.length ; i++) {
       products[i].price = +products[i].price * 60000; 
     }
   }
