@@ -11,8 +11,8 @@ async function getProducts(convert) {
     for(let i = 0 ; i <= products.length ; i++) {
       products[i].price = +products[i].price * 60000; 
     }
+    return products;
   }
-  return products;
 }
 
 async function getProductById(productId) {
