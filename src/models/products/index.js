@@ -21,7 +21,7 @@ async function getProductById(productId) {
     where id = $1
   `;
   const result = await query(sql, [productId]);
-  return result.rows[0];
+  return result.rows;
 }
 
 async function createProduct(productData) {
