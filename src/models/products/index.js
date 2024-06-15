@@ -40,7 +40,7 @@ async function createProduct(productData) {
 async function deleteProduct(productId) {
   const sql = `
     delete from ${schema}.${table}
-    where id = $1
+    where id = productId
   `;
   const result = await query(sql, [productId]);
   return result;
